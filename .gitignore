@@ -1,0 +1,11 @@
+## Whitlelist style .gitignore
+# Ignore everything
+*
+# Allow `.gitignore` to ensure you don’t accidentally ignore itself
+!.gitignore
+# Allow specific files or folders
+!src/
+!src/**
+!makefile
+!Makefile
+!README.md
