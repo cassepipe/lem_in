@@ -53,4 +53,7 @@ re: fclean all
 print_name:
 > @echo $(NAME)
 
+run: all
+> @./$(NAME)
+
 .PHONY: all clean fclean re print_name
