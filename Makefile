@@ -4,8 +4,8 @@ MAKEFLAGS += --no-builtin-rules
 ## VARIABLES ##
 ###############
 CFLAGS = -MMD -Wall -Wextra -Werror -g3
+CC = clang-18
 CC = gcc
-CC = clang
 ADRESS_SANITIZER = -fsanitize=address
 LINKER = $(CC)
 ANALYZER = -fanalyzer
@@ -18,8 +18,7 @@ endif
 CFLAGS		+=	$(ADRESS_SANITIZER) 
 # CFLAGS		+=	-DNDEBUG
 
-# LDFLAGS		+=	$(ADRESS_SANITIZER) 
-LDLIBS = -lasan
+LDFLAGS		+=	$(ADRESS_SANITIZER) 
 
 SRC/SOURCES  = $(wildcard src/*.c)
 OBJ/OBJECTS	= $(patsubst src/%.c, obj/%.o, $(SRC/SOURCES))
